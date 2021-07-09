@@ -5,13 +5,17 @@ import Courses from './Pages/Courses'
 import Blogs from './Pages/Blogs' 
 import Logincard from './Pages/Logincard'
 import Signincard from './Pages/Signincard'
+import OpenSource from './Pages/OpenSource'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import OSmodules from './Pages/OSmodules'
 
 function App() {
   return ( 
-      <>  
-      <Router>
+      <> 
+      <OSmodules></OSmodules> 
+      
+      {/* <Router>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/PaidFeatures" component={PaidFeatures}/>
@@ -20,7 +24,7 @@ function App() {
         <Route exact path="/Logincard" component={Logincard}/>
         <Route exact path="/Blogs" component={Blogs}/>
       </Switch>
-      </Router>
+      </Router> */}
       </>
   );
 }
