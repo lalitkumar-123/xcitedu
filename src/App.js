@@ -13,9 +13,8 @@ import OSmodules from './Pages/OSmodules'
 function App() {
   return ( 
       <> 
-      <OSmodules></OSmodules> 
-      
-      {/* <Router>
+     
+      <Router>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/PaidFeatures" component={PaidFeatures}/>
@@ -23,8 +22,10 @@ function App() {
         <Route exact path="/Signincard" component={Signincard}/>
         <Route exact path="/Logincard" component={Logincard}/>
         <Route exact path="/Blogs" component={Blogs}/>
+        <Route exact path="/OpenSource" component={OpenSource}/>
+        <Route exact path="/OSmodules" component={OSmodules}/>
       </Switch>
-      </Router> */}
+      </Router>
       </>
   );
 }

@@ -49,7 +49,7 @@ const OpenSource=()=>{
       <div className="subjects-div">
         <Router>
       {subjects.map((item)=>(
-      <Link ><div className="subject" style={{backgroundColor:item.color}} >
+      <Link to="/OSmodules" ><div className="subject" style={{backgroundColor:item.color}} >
        {item.name}
       </div></Link>))}
       </Router>

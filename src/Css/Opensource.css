@@ -36,10 +36,11 @@ a{
     position: relative;
     justify-items: center;
     align-items: center;
-    margin: 2% 5%;
+    
     height: 50%;
     width: 90%;
     padding:20px;
+    margin: 2% 5%;
     
     
 }
