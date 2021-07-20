@@ -7,6 +7,7 @@ import GraphicEqIcon from '@material-ui/icons/GraphicEq';
 import LeakAddIcon from '@material-ui/icons/LeakAdd';
 import FlareIcon from '@material-ui/icons/Flare';
 import SearchIcon from '@material-ui/icons/Search';
+import atomgif from '../assets/images/atomgif.gif'
 const topics=[{name:"Electrostatistics",icon:<OfflineBoltRoundedIcon fontSize="large"></OfflineBoltRoundedIcon>},
 {name:"Mechanics",icon:<SettingsIcon fontSize="large"></SettingsIcon>},
 {name:"Relativity",icon:<AllInclusiveIcon fontSize="large"></AllInclusiveIcon>},
@@ -20,20 +21,24 @@ function OSmodules() {
          <div className="Maindiv">
              <div className="Header-div">
                  <div className="topic-heading">
-                     <h1>Physics</h1>
+                     <h1>P H Y S I C S</h1>
                  </div>
                  <div className="SearchContainer">
-                         <input className="searchbox" type="text" placeholder="Search"></input>
-                         <butt className="searchButton"><SearchIcon></SearchIcon></butt>
+                         <input className="searchbox" type="text" placeholder="Search by topic"></input>
+                         <button className="searchButton"><SearchIcon></SearchIcon></button>
                  </div>
 
              </div>
+             <div className="lower-div">
              <div className="topics-box">
                 {topics.map((item)=>(
                       <div className="topic-div">{item.icon}  {item.name}</div>
                 ))}
              </div>
-             
+             <div className="gif-box">
+                 <img src={atomgif}></img>
+             </div>
+             </div>
          </div>
        </>
     )

@@ -30,6 +30,7 @@ const useStyles = makeStyles(() => ({
     "@media (max-width: 900px)": {
       paddingLeft: 0,
     },
+    
   },
   logo: {
     fontFamily: "Work Sans, sans-serif",

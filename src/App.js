@@ -9,12 +9,14 @@ import OpenSource from './Pages/OpenSource'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import OSmodules from './Pages/OSmodules'
-
+import Header from './Navbar/Header'
+import Footer from './Pages/Footer'
 function App() {
   return ( 
       <> 
      
       <Router>
+      <Header></Header>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/PaidFeatures" component={PaidFeatures}/>
@@ -25,6 +27,7 @@ function App() {
         <Route exact path="/OpenSource" component={OpenSource}/>
         <Route exact path="/OSmodules" component={OSmodules}/>
       </Switch>
+      <Footer></Footer>
       </Router>
       </>
   );
