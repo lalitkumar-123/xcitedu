@@ -27,6 +27,8 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "#080808",               // "#400CCC",
     paddingRight: "79px",
     paddingLeft: "118px",
+    position: "fixed",
+    overflow: "hidden",
     "@media (max-width: 900px)": {
       paddingLeft: 0,
     },
@@ -55,6 +57,7 @@ const useStyles = makeStyles(() => ({
   },
   drawerContainer: {
     padding: "20px 30px",
+    marginTop: "4vh",
   },
 }));
 
@@ -136,7 +139,7 @@ export default function Header() {
             component: RouterLink,
             to: href,
             color: "inherit",
-            style: { textDecoration: "none" },
+            style: { textDecoration: "none"},
             key: label,
           }}
         >
@@ -147,8 +150,8 @@ export default function Header() {
   };
 
   const xciteduLogo = (
-    <Typography variant="h8" component="h1" className={logo}>
-      XcitEdu
+    <Typography variant="h6" component="h1" className={logo}>
+      XCITEDU
     </Typography>
   );
 
