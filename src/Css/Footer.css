@@ -229,6 +229,35 @@
   text-align: start;
   width: 230px;
 }
+
+.icon {
+  color: #3fbbc0;
+}
+li {
+  list-style: none;
+}
+.list {
+  margin-top: -2rem;
+  margin-left: -1.4rem;
+  line-height: 2rem;
+  text-decoration: none;
+}
+.anchor {
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: 600;
+}
+.anchor:hover {
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: 600;
+}
+.group-links {
+  display: flex;
+}
+.footer-links-1 {
+  margin-right: 2rem;
+}
 /* 
 .description2 {
   float: right;
