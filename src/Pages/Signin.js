@@ -20,7 +20,7 @@ export default function Signin()
   }
      return (
       <>
-        <div className="container" id="container" style={{width: window.innerWidth-300}}>
+        <div className="container mt-5" id="container" style={{width: window.innerWidth-300}}>
         <div className="form-container sign-up-container">
           <form>
             <h1>Sign Up</h1>

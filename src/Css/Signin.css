@@ -1,13 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
 
 :root {
-  --main-color: #6dd5ed;
-  --secondary-color: #2193b0;
+  --main-color: hsl(128, 78%, 68%); /* #6dd5ed; */
+  --secondary-color: hsl(133, 68%, 41%); /* #2193b0; */
   --gradient: linear-gradient(
     135deg,
     var(--main-color),
     var(--secondary-color)
   );
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 
 * {
@@ -19,8 +29,8 @@ body {
   font-family: "Nunito", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   min-height: 100vh;
   margin: 1rem 0;
 }

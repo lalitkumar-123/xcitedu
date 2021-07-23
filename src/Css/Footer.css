@@ -15,8 +15,10 @@
   outline: none;
 }
 .background-static {
-  background: linear-gradient(105deg, #6e99e6, #093c94);
-  background-size: cover;
+  /* background: linear-gradient(105deg, #6e99e6, #093c94);
+  background-size: cover; */
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
 }
 .footer {
   width: 100%;
@@ -25,7 +27,8 @@
   display: grid;
   place-items: center;
   z-index: 1;
-  background: linear-gradient(105deg, #6e99e6, #093c94);
+  /* background: linear-gradient(105deg, #6e99e6, #093c94); */
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -70,7 +73,7 @@
   display: flex;
   align-items: center;
   font-size: var(--font-size-heading);
-  padding-top: 100px;
+  padding-top: 50px;
   font-family: var(--heading-font);
   font-weight: 600;
   margin-left: 5vw;
@@ -159,7 +162,6 @@
   font-size: 1rem;
   color: #fefefe;
   background-color: rgba(255, 255, 255, 0.2);
-
   border-style: none;
   border-radius: 20px;
   transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -173,6 +175,8 @@
 .links {
   grid-area: links;
   margin-right: 5vw;
+  margin-left: -3rem;
+  margin-top: -80px;
 }
 .links .flex-container {
   display: flex;
@@ -200,6 +204,7 @@
 }
 .links .flex-container li a i:hover {
   padding: 1.5rem;
+  padding-top: 0.5rem;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.3s ease-out;
 }
@@ -217,14 +222,43 @@
   font-family: var(--paragragh-font);
 }
 .description1 {
-  float: right;
-  margin-right: 2vw;
-  margin-left: 0;
-  text-align: right;
+  margin-left: 380px;
+  margin-top: -60px;
   font-family: var(--paragragh-font);
   line-height: 2.2ch;
+  text-align: start;
   width: 230px;
 }
+
+.icon {
+  color: #3fbbc0;
+}
+li {
+  list-style: none;
+}
+.list {
+  margin-top: -2rem;
+  margin-left: -1.4rem;
+  line-height: 2rem;
+  text-decoration: none;
+}
+.anchor {
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: 600;
+}
+.anchor:hover {
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: 600;
+}
+.group-links {
+  display: flex;
+}
+.footer-links-1 {
+  margin-right: 2rem;
+}
+/* 
 .description2 {
   float: right;
   margin-right: 2vw;
@@ -240,11 +274,19 @@
   font-family: var(--paragragh-font);
   line-height: 2.2ch;
   width: 280px;
-}
+} */
 .strong {
   font-weight: 700;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-direction: row;
   font-size: 18px;
   letter-spacing: 1pt;
+  margin-left: 1rem;
+}
+.contact-second {
+  margin-left: 60px;
 }
 /* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {

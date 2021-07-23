@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Css/Footer.css'
 import {FaGithub, FaTwitter, FaYoutube, FaLinkedin, FaInstagram} from 'react-icons/fa';
+import {FiChevronRight} from 'react-icons/fi';
 
 function FooterLanding(props){
    return ( 
@@ -9,11 +10,11 @@ function FooterLanding(props){
             <div class="grid-container">
                <div class="wanna-talk-to-us"><h1>Contact us?</h1></div>
                   <div class="write-to-us">
-                     <form id="contact-us">
+                        <div id="contact-us">
                         <input type="email" id="email" name="email" placeholder="Email"></input>
                         <textarea type="text" id="message" name="messsage" placeholder="Start typing!"></textarea>
                         <div className="send-btn-container"><input type="submit" value="Send" className="send"></input></div>
-                     </form>
+                        </div>
                   </div>
                   <div class="links">
                         <ul class="footer-links flex-container">
@@ -26,9 +27,41 @@ function FooterLanding(props){
                   </div>
                   <div class="footer-info">
                      <div class="desc">
-                        <p class = "contact strong">Boared with expensive offline learning! Get guided by <br/>
+                        <p class = "contact strong">Boared with expensive offline learning! <br/> Get guided by
                         our one-to-one learning platform.</p>
-                        <div class="description1">
+                        <div class="group-links">
+                        <div class="footer-links-1">
+                        <p class = "contact strong">About Us</p> 
+                        <ul class="list">
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Services</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="career.html">Career</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Privacy policy</a></li>
+                        </ul>
+                        </div>
+                        <div class="footer-links-2 mx-5">
+                        <p class = "contact strong">Announcements</p>
+                        <ul class="list">
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Services</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="career.html">Career</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Privacy policy</a></li>
+                        </ul>
+                        </div>
+                        <div class="footer-links-3 mx-3">
+                        <p class = "contact strong">Services</p>
+                        <ul class="list">
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Services</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="career.html">Career</a></li>
+                           <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Privacy policy</a></li>
+                        </ul>
+                        </div>
+                        </div>
+                        {/* <div class="description1">
                            <p class = "contact strong"></p>
                            <br></br>
                            <p>Dwarka</p>
@@ -37,22 +70,8 @@ function FooterLanding(props){
                            <p>Email: contact@xcitedu.com</p>
                            <p>Phone: +91 8527985605</p>
                            <br></br>
-                           </div>
+                           </div> */}
                         <div>
-                           {/* <div class="description3">
-                              <p class = "guideline strong">General Guidelines</p>
-                              <p class = "contact strong"></p>
-                              <br></br>
-                              <p>Code of Conduct</p>    
-                              <br></br>        
-                              <br></br>        
-                           </div>
-                           <div class="description2">
-                              <p class = "community strong">Community</p>
-                              <br></br>
-                              <p>GFG KIIT</p>
-                              <br></br>
-                        </div> */}
                      </div>
                   </div>
                </div>
