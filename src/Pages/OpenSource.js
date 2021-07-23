@@ -32,7 +32,7 @@ const OpenSource=()=>{
   
   const[visibility,setVisibility]=useState("hidden")
   const[close,setClose]=useState(false)
-
+  const [bgcolor,setBgColor]=useState("white")
   const[menuItem,setMenuItem]=useState([])
 
  
@@ -42,6 +42,10 @@ useEffect(() => {
   
 }, [visibility,menuItem])
 
+useEffect(()=>{  
+  close==false?setBgColor("rgb(190, 235, 220)"):setBgColor("white")
+  console.log(bgcolor);
+},[close])
     return <>
   
   <div className="main_div">
@@ -50,14 +54,15 @@ useEffect(() => {
     <div class="category_menu">
       {subjects.map(item=>
         <div className="categ" onMouseEnter={()=>{setMenuItem(item.topics);
-        setClose(true)} }  >{item.name}</div>    
+        setClose(true)
+        setBgColor("rgb(190, 235, 220)")} } style={{backgroundColor:{bgcolor}}}  >{item.name}</div>    
       )}
       </div>
     <div className="sub_menu_div" style={{visibility:{visibility},transition:"ease-in 5s"}} >
-      <div className="sub_menu" >{menuItem.map((item)=>(<a>{item.name}</a>))} 
+      <div className="sub_menu" >{menuItem.map((item)=>(<a >{item.name}</a>))} 
       </div>
       {close==true?<div
-       onClick={()=>{setMenuItem([]);setClose(false);}}><CancelIcon style={{zIndex:5}}></CancelIcon></div>:"" }
+       onClick={()=>{setMenuItem([]);setClose(false);}}><CancelIcon  style={{zIndex:5,display:"flex",justifyContent:"space-around"}}></CancelIcon></div>:"" }
       </div>
       </div>
     

@@ -106,10 +106,10 @@ font-family: 'Yomogi', cursive; */
     padding: 5px;
     display: inline;
 }
-.categ:hover
+/* .categ:hover
 {
     background-color: rgb(190, 235, 220);
-}
+} */
 @media (max-width:845px) {
     .category_menu
     {
