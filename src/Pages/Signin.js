@@ -23,7 +23,7 @@ export default function Signin()
         <div className="container mt-5" id="container" style={{width: window.innerWidth-300}}>
         <div className="form-container sign-up-container">
           <form>
-            <h1>Sign Up</h1>
+            <h1 style={{color:"#0c7d81"}}>Sign Up</h1>
             <div className="social-container">
               <a href="#" className="social"><i><FaLinkedin/></i></a>
               <a href="#" className="social"><i><FaGoogle/></i></a>
@@ -39,7 +39,7 @@ export default function Signin()
         </div>
         <div className="form-container sign-in-container">
           <form>
-            <h1>Sign In</h1>
+            <h1 style={{color:"#0c7d81"}}>Sign In</h1>
             <div className="social-container">
               <a href="#" className="social"><i><FaLinkedin/></i></a>
               <a href="#" className="social"><i><FaGoogle/></i></a>
