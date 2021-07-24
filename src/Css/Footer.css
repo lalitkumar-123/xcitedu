@@ -29,7 +29,7 @@
   z-index: 1;
   /* background: linear-gradient(105deg, #6e99e6, #093c94); */
   /* background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%); */
-  background-image: linear-gradient(45deg, rgb(19,62,63)100% ,aquamarine 0%);
+  background-image: linear-gradient(45deg, #0c7d81 100% ,#62d1c6 0%);
 
   background-size: cover;
   background-blend-mode: overlay;
@@ -198,7 +198,7 @@
   height: 8vh;
 }
 .links .flex-container li a i {
-  color: aquamarine;
+  color: #6df7e9;
   background-color: rgba(255, 255, 255, 0);
   font-size: var(--footer-icon-size);
   border-radius: 20px;

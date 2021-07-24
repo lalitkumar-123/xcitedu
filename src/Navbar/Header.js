@@ -5,26 +5,27 @@ import { Link as RouterLink } from "react-router-dom"
 
 const headersData = [
   {
-    label: "HOME",
+    label: "About Us",
     href: "/",
   },
   {
-    label: "PAID FEATURES",
+    label: "Carrers",
     href: "/PaidFeatures",
   },
   {
-    label: "COURSES",
+    label: "Open Source Community",
     href: "/Courses",
   },
   {
-    label: "BLOGS",
+    label: "Login",
     href: "/Blogs",
   },
 ];
 
 const useStyles = makeStyles(() => ({
   header: {
-    backgroundColor: "#080808",               // "#400CCC",
+    backgroundColor: "teal", 
+               // "#400CCC",
     paddingRight: "79px",
     paddingLeft: "118px",
     position: "fixed",
