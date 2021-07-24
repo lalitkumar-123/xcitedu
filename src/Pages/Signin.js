@@ -1,9 +1,15 @@
-import React from 'react'
-import '../Css/Signin.css'
+import React , {useRef, useState} from 'react'
+import {Alert} from 'react-bootstrap';
 import {FaGoogle, FaLinkedin, FaInstagram} from 'react-icons/fa';
+import axios from "axios"
+import '../Css/Signin.css'
 
 export default function Signin() 
 {
+  const username = useRef();
+  const password = useRef();
+  const email = useRef();
+  const [error,setError] = useState("");
 
   function signupfunc(e)
   {
@@ -18,6 +24,44 @@ export default function Signin()
     const container = document.getElementById("container");
     container.classList.remove("right-panel-active");
   }
+
+  function signup(e)
+  {
+    e.preventDefault();
+    console.log(username.current.value, email.current.value, password.current.value);
+    let data = {
+      username: username.current.value,
+      email: email.current.value,
+      password: password.current.value,
+    }
+    axios.post("http://localhost:3000/register", data)
+    .then(response => {
+      console.log("Signed In");
+    })
+    .catch(error => {
+      console.log(error);
+      setError(error);
+    })
+  }
+
+  function login(e)
+  {
+    e.preventDefault();
+    console.log(username.current.value, password.current.value);
+    let data = {
+      username: username.current.value,
+      password: password.current.value,
+    }
+    axios.post("http://localhost:3000/login", data)
+    .then(response => {
+      console.log("Logged In");
+    })
+    .catch(error => {
+      console.log(error);
+      setError(error);
+    })
+  }
+
      return (
       <>
         <div className="container mt-5" id="container" style={{width: window.innerWidth-300}}>
@@ -31,10 +75,11 @@ export default function Signin()
             </div>
             <span>or use your email for registration</span> 
             <br/>
-            <input className="input-tag-parent" type="text" placeholder="Name" />
-            <input className="input-tag-children" type="email" placeholder="Email" />
-            <input className="input-tag-children" type="password" placeholder="Password" />
-            <button className="button-tag"  onClick={(e) => e.preventDefault()}>Sign Up</button>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <input className="input-tag-parent" ref={username} type="text" placeholder="Username" required/>
+            <input className="input-tag-children" ref={email} type="email" placeholder="Email" required/>
+            <input className="input-tag-children" ref={password} type="password" placeholder="Password" required/>
+            <button className="button-tag"  onClick={(e) => signup(e)}>Sign Up</button>
           </form>
         </div>
         <div className="form-container sign-in-container">
@@ -47,10 +92,11 @@ export default function Signin()
             </div>
             <span>or use your account</span>
             <br/>
-            <input className="input-tag-parent" type="email" placeholder="Email" />
-            <input className="input-tag-children" type="password" placeholder="Password" />
+            {error && <Alert variant="danger">{error}</Alert>}
+            <input className="input-tag-parent" ref={username} type="email" placeholder="Username" required/>
+            <input className="input-tag-children" ref={password} type="password" placeholder="Password" required/>
             <a href="#">Forgot your password?</a>
-            <button className="button-tag-secondary" onClick={(e) => e.preventDefault()}>Sign In</button>
+            <button className="button-tag-secondary" onClick={(e) => login(e)}>Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
