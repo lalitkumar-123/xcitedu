@@ -6,9 +6,9 @@ import '../Css/Signin.css'
 
 export default function Signin() 
 {
-  const username = useRef();
-  const password = useRef();
-  const email = useRef();
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [error,setError] = useState("");
 
   function signupfunc(e)
@@ -28,15 +28,18 @@ export default function Signin()
   function signup(e)
   {
     e.preventDefault();
-    console.log(username.current.value, email.current.value, password.current.value);
+    console.log(username, email, password);
     let data = {
-      username: username.current.value,
-      email: email.current.value,
-      password: password.current.value,
+      username: username,
+      email: email,
+      password: password,
     }
-    axios.post("http://localhost:3000/register", data)
+    axios.post("http://localhost:5000/register", data)
     .then(response => {
       console.log("Signed In");
+      setUsername("");
+      setEmail("");
+      setPassword("");
     })
     .catch(error => {
       console.log(error);
@@ -47,14 +50,16 @@ export default function Signin()
   function login(e)
   {
     e.preventDefault();
-    console.log(username.current.value, password.current.value);
+    console.log(username, password);
     let data = {
-      username: username.current.value,
-      password: password.current.value,
+      username: username,
+      password: password,
     }
-    axios.post("http://localhost:3000/login", data)
+    axios.post("http://localhost:5000/login", data)
     .then(response => {
       console.log("Logged In");
+      setUsername("");
+      setPassword("");
     })
     .catch(error => {
       console.log(error);
@@ -76,9 +81,9 @@ export default function Signin()
             <span>or use your email for registration</span> 
             <br/>
             {error && <Alert variant="danger">{error}</Alert>}
-            <input className="input-tag-parent" ref={username} type="text" placeholder="Username" required/>
-            <input className="input-tag-children" ref={email} type="email" placeholder="Email" required/>
-            <input className="input-tag-children" ref={password} type="password" placeholder="Password" required/>
+            <input className="input-tag-parent" value={username} onChange={(e) => {setUsername(e.target.value)}} type="text" placeholder="Username" required/>
+            <input className="input-tag-children" value={email} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" required/>
+            <input className="input-tag-children" value={password} onChange={(e) => {setPassword(e.target.value)}} type="password" placeholder="Password" required/>
             <button className="button-tag"  onClick={(e) => signup(e)}>Sign Up</button>
           </form>
         </div>
@@ -93,8 +98,8 @@ export default function Signin()
             <span>or use your account</span>
             <br/>
             {error && <Alert variant="danger">{error}</Alert>}
-            <input className="input-tag-parent" ref={username} type="email" placeholder="Username" required/>
-            <input className="input-tag-children" ref={password} type="password" placeholder="Password" required/>
+            <input className="input-tag-parent" value={username} onChange={(e) => {setUsername(e.target.value)}} type="email" placeholder="Username" required/>
+            <input className="input-tag-children" value={password} onChange={(e) => {setPassword(e.target.value)}} type="password" placeholder="Password" required/>
             <a href="#">Forgot your password?</a>
             <button className="button-tag-secondary" onClick={(e) => login(e)}>Sign In</button>
           </form>

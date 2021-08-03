@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import {AppBar,Toolbar,Typography,makeStyles,IconButton,Drawer,Link,MenuItem} from "@material-ui/core"
+import {AppBar,Toolbar,Typography,makeStyles,IconButton,Drawer,Link,MenuItem,ListItemIcon, Divider} from "@material-ui/core"
+import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from "@material-ui/icons/Menu"
 import { Link as RouterLink } from "react-router-dom"
 
@@ -7,18 +8,22 @@ const headersData = [
   {
     label: "HOME",
     href: "/",
+    icon: (<HomeIcon/>),
   },
   {
     label: "PAID FEATURES",
     href: "/PaidFeatures",
+    icon: (<HomeIcon/>),
   },
   {
     label: "COURSES",
     href: "/Courses",
+    icon: (<HomeIcon/>),
   },
   {
     label: "BLOGS",
     href: "/Blogs",
+    icon: (<HomeIcon/>),
   },
 ];
 
@@ -131,7 +136,7 @@ export default function Header() {
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href }) => {
+    return headersData.map(({ label, href, icon }) => {
       return (
         <Link
           {...{
@@ -142,7 +147,13 @@ export default function Header() {
             key: label,
           }}
         >
-          <MenuItem>{label}</MenuItem>
+          <MenuItem>
+            <ListItemIcon>
+              {icon}
+            </ListItemIcon>
+            {label}
+          </MenuItem>
+          {/* <Divider/> */}
         </Link>
       );
     });

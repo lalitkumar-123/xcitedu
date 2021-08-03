@@ -13,12 +13,12 @@ export default function Home() {
 
     return (
         <> 
-        {width > 600 ? <Signin/> : <Signincard/>}
-        {/* <Header/>  
+        {/* {width > 600 ? <Signin/> : <Signincard/>} */}
+        <Header/>  
         <Test/>
-        <Cardcomponent/>
+        {/* <Cardcomponent/> */}
         <Testimonial/>
-        <Footer/> */}
+        <Footer/>
         </> 
     )
 }
