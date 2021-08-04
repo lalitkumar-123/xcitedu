@@ -32,33 +32,33 @@ function FooterLanding(props){
                         <div class="group-links">
                         <div class="footer-links-1">
                         <p class = "contact strong">About Us</p> 
-                        <ul class="list">
+                        {/* <ul class="list">
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Services</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="career.html">Career</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Privacy policy</a></li>
-                        </ul>
+                        </ul> */}
                         </div>
                         <div class="footer-links-2 mx-5">
                         <p class = "contact strong">Announcements</p>
-                        <ul class="list">
+                        {/* <ul class="list">
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Services</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="career.html">Career</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Privacy policy</a></li>
-                        </ul>
+                        </ul> */}
                         </div>
                         <div class="footer-links-3 mx-3">
                         <p class = "contact strong">Services</p>
-                        <ul class="list">
+                        {/* <ul class="list">
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="about.html">About us</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Services</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="career.html">Career</a></li>
                            <li><i class = "icon"><FiChevronRight/></i><a class="anchor" href="#">Privacy policy</a></li>
-                        </ul>
+                        </ul> */}
                         </div>
                         </div>
                         {/* <div class="description1">

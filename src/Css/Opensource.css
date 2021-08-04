@@ -85,7 +85,7 @@ font-family: 'Yomogi', cursive; */
 }
 .sub_menu
 {
-    flex: 1;    background-color: rgb(19,62,63);
+    flex: 1;    background-color: #0c7d81;
     color: aquamarine;
     display: flex;
     flex-direction: row;

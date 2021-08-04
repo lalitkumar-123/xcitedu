@@ -28,6 +28,10 @@
   -webkit-transform: translateY(-50%) rotate(20deg);
   transform: translateY(-50%) rotate(20deg);
 } */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -65,17 +69,37 @@ body {
 
 /* <---------------------------------------> */
 
+.head-row
+{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+.headimg
+{
+  height: 10%;
+  width: 10%;
+}
 #hero {
   width: 100%;
   height: 75vh;
+  /* background: url("../assets/images/welcomegif.gif"); */
   background: url("../Images/hero-bg.jpg") top left;
-  background-size: cover;
+  background-size:cover;
+  /* background-repeat: no-repeat; */
+  /* background-position: right center; */
   position: relative;
+  /* right:0;
+  top:0; */
+  
 }
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.6);
+  /* background: rgba(255, 255, 255, 0.6); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -101,7 +125,7 @@ body {
   font-weight: 700;
   line-height: 56px;
   font-family: "Poppins", sans-serif;
-  color: #106eea;
+  color: #0c7d81;
 }
 
 #hero h2 {
@@ -201,7 +225,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   /* margin-left: auto;
   margin-right: auto; */
   /* width: 300px; */
@@ -325,7 +349,9 @@ body {
 .course_section .btn-box a {
   display: inline-block;
   padding: 8px 45px;
-  background-color: #3fbbc0;
+  /* background-color: #3fbbc0; */
+  background-color: #0c7d81;
+
   border: 1px solid #3fbbc0;
   /* background-color: #133e3f; */
   /* border: 1px solid #133e3f; */
@@ -463,7 +489,9 @@ body {
   background: #fff;
   border-radius: 50%;
   transition: 0.5s;
-  color: #3fbbc0;
+  /* color: #3fbbc0; */
+  color: #0c7d81;
+
   overflow: hidden;
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
 }
@@ -491,7 +519,9 @@ body {
 }
 
 .services .title a:hover {
+  /* color: #3fbbc0; */
   color: #3fbbc0;
+
 }
 
 .services .title::after {
@@ -534,7 +564,7 @@ body {
 }
 
 .featured-services .icon-box:hover::before {
-  background: #3fbbc0;
+  background: #62d1c6;
   top: 0;
   border-radius: 0px;
 }
@@ -546,7 +576,7 @@ body {
 .featured-services .icon i {
   font-size: 48px;
   line-height: 1;
-  color: #3fbbc0;
+  color: #0c7d81;
   transition: all 0.3s ease-in-out;
 }
 
@@ -695,4 +725,73 @@ body {
   .mb-6 {
     margin-bottom: 0rem;
   }
+}
+
+#new-head
+{
+  /* font-family: 'Anton', sans-serif; */
+-webkit-text-stroke:1px #62d1c6;
+font-size: clamp(2rem, -0.875rem + 8.333vw, 4.7rem);
+color:white; 
+margin-top: 1.86%; 
+background-color: white;   
+text-align: center;
+ }
+#about-us
+{
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../assets/images/education.png");
+  /* background-image: url(../assets/images/education.png); */
+  background-size: cover;
+  background-attachment: fixed;
+}
+#about-us h6
+{
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+  flex: 0.5;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-family: 'Anton', sans-serif;
+font-family:'Spartan', sans-serif;
+
+
+}
+/* #about-us p
+{
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 1.4rem);
+ 
+} */
+@media screen and (min-width:850px) {
+  #services div{
+    width: 16.6%;
+  }
+  
+}
+@media screen and (max-width:850px) {
+  #services div{
+    width: 50%;
+  }
+  
+}
+
+#services i
+{
+background-color: #fff;
+border-radius: 50%;
+padding: 23px;
+color:#0c7d81;
+}
+#services i:hover
+{
+color: #62d1c6;
+}
+#services p
+{
+  
+  color:white;
+  font-size: 20px;
+  padding: 25px;
+  
 }

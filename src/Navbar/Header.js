@@ -2,29 +2,50 @@ import React, { useState, useEffect } from "react"
 import {AppBar,Toolbar,Typography,makeStyles,IconButton,Drawer,Link,MenuItem} from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 import { Link as RouterLink } from "react-router-dom"
-
+import {SchoolIcon} from '@material-ui/icons/School';
+import '../Css/header.css'
 const headersData = [
   {
     label: "About Us",
     href: "/",
+    
   },
   {
-    label: "Carrers",
+    label: "Careers",
     href: "/PaidFeatures",
+    
   },
   {
     label: "Open Source Community",
     href: "/Courses",
+    
+  },
+  {
+    label: "Affiliate Marketing",
+    href: "/Courses",
+    
+  },
+  {
+    label: "Internship",
+    href: "/Courses",
+    
+  },
+  
+  {
+    label: "Research Prospects",
+    href: "/Blogs",
+    
   },
   {
     label: "Login",
     href: "/Blogs",
+    
   },
 ];
 
 const useStyles = makeStyles(() => ({
   header: {
-    backgroundColor: "teal", 
+    backgroundColor: "#0c7d81", 
                // "#400CCC",
     paddingRight: "79px",
     paddingLeft: "118px",
@@ -144,7 +165,7 @@ export default function Header() {
             key: label,
           }}
         >
-          <MenuItem>{label}</MenuItem>
+      <MenuItem>{label}</MenuItem>
         </Link>
       );
     });
@@ -157,8 +178,9 @@ export default function Header() {
   );
 
   const getMenuButtons = () => {
-    return headersData.map(({ label, href }) => {
+    return headersData.map(({ label, href}) => {
       return (
+        
         <Link
           {...{
             key: label,
@@ -169,7 +191,7 @@ export default function Header() {
             className: menuButton,
           }}
         >
-          {label}
+         {label}
         </Link>
       );
     });

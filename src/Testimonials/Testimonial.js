@@ -25,7 +25,7 @@ const NextBtn = (props) => {
 const Testimonial = () => {
   return (
     <>
-    <div class="headers m-5">TESTIMONIALS</div>
+    <div class="headers m-5" style={{color:"#0c7d81",display: "flex", justifyContent: "center"}}>TESTIMONIALS</div>
     <div
       className="testimonial mb-5"
       style={{ display: "flex", justifyContent: "center" }}
